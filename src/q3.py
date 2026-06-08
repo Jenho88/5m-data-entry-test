@@ -5,7 +5,19 @@ def update_dictionary(dct, key, value):
     - If the key already exists in dct, print the original value, then update its value.
     - Return the updated dictionary.
     """
-    return
+    temp_dct = dct
+    if key in temp_dct:
+        print(temp_dct.get(key))
+        temp_dct[key] = value
+    return temp_dct
+
+
+
+tmpdct1 = update_dictionary({}, "name", "Alice")
+tmpdct2 = update_dictionary({"age": 25}, "age", 26)
+print(tmpdct1)
+print(tmpdct2)
+
 
 
 # Task 2
